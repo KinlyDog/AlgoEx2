@@ -142,10 +142,6 @@ public class LinkedList2 {
         _nodeToInsert.next = this.head;
         this.head.prev = _nodeToInsert;
         this.head = _nodeToInsert;
-
-        if (count() == 1) {
-            this.tail = _nodeToInsert;
-        }
     }
 
     // ok
