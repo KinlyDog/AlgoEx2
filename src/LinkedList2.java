@@ -132,6 +132,13 @@ public class LinkedList2 {
 
     // ok
     public void insertFirst(Node _nodeToInsert) {
+        if (this.head == null) {
+            this.head = _nodeToInsert;
+            this.tail = _nodeToInsert;
+
+            return;
+        }
+
         _nodeToInsert.next = this.head;
         this.head.prev = _nodeToInsert;
         this.head = _nodeToInsert;
@@ -166,5 +173,4 @@ public class LinkedList2 {
         node.next.prev = _nodeToInsert;
         node.next = _nodeToInsert;
     }
-
 }
