@@ -169,4 +169,11 @@ public class LinkedList2 {
         node.next.prev = _nodeToInsert;
         node.next = _nodeToInsert;
     }
+
+    public void removeTail() {
+        Node temp = tail;
+        tail = tail.prev;
+        tail.next = null;
+        temp = null;
+    }
 }
